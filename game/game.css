@@ -1,0 +1,318 @@
+body {
+    background-image: url(../img/bcg.jpg);
+    background-size: cover;
+    margin:top 0;
+    overflow-y: hidden;
+}
+/* לוח עיגולים */
+.number {
+    width: 10%;
+    margin-right: 3%;
+    border-radius: 50%;
+    display: none;
+    transition: box-shadow 0.1s ease-in-out; 
+}
+.number.active {
+    box-shadow: 1px 1px 10px 3px rgb(245, 135, 225), 0 0 25px 3px rgb(241, 173, 235), 0 0 10px 3px rgb(240, 214, 239);
+}
+.line {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    
+}
+/* כפתורי שלבים */
+#level1,
+#level2,
+#level3 {
+    width: 15%;
+    display: block;
+    margin-top: 2%;
+    margin-right: auto;
+    margin-left: auto;
+   
+}
+.levelsbuttons {
+    width: 30%;
+}
+.levelsbuttons:hover {
+    transform: scale(0.6);
+    transition-duration: 0.5s;
+}
+#logolevel {
+    width: 20%;
+    margin-top: 2%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 4%;
+}
+#logolevel:hover {
+    transform: scale(0.6);
+    transition-duration: 0.5s;
+    transform: rotate(360deg);
+    opacity: 0.5;
+    display: block;
+}
+/* מונה אחוזי חיים של המשחק */
+#percent{
+    width: 15%;
+    margin-top:-3%;
+    margin-right: 80%;
+    margin-left: 1%;
+    position:fixed;
+    display:none;
+}
+#time{
+    margin-left:92%;
+    color: white;
+    display:none;
+    top: 0;
+    position: absolute;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f3ceea, 0 0 40px #eaa0e0, 0 0 50px #f084e5, 0 0 60px #ea65dd, 0 0 70px #f33cda;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff6bdc, 0 0 40px #ff6bdc, 0 0 50px #ff6bdc, 0 0 60px #ff6bdc, 0 0 70px #ff6bdc, 0 0 80px #ff6bdc;
+    }
+}
+#win{
+    width: 30%;
+    top: 6%;
+    display: none;
+    position: fixed;
+    margin-left: 35%;
+    transition: 0.5s;
+}
+#lose{
+    width: 30%;
+    top: 6%;
+    display: none;
+    position: fixed;
+    margin-left: 35%;
+    z-index: 2;
+    transition: 0.5s;
+}
+#myScore,#myRecord{
+    font-size: xx-large;
+    color: rgb(241, 173, 235);
+}
+#getMyScore{
+    display: block;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 2%;
+    z-index: 100;
+}
+#getMyRecord{
+    display: block;
+    position: relative;
+    margin-left: 50%;
+    margin-top: 12.5%;
+    z-index: 100;
+}
+/* :דף הבית */
+#logo {
+    width: 30vw;
+    height: auto;
+    display: block;
+    margin-top: 3%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#logo:hover{
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+}
+
+#arrow {
+    width: 20vw;
+    display: block;
+    margin-top: 6%;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+}
+#levels{
+    width: 5%;
+    position: absolute;
+    bottom:4%;
+    left: 87%;
+}
+#in,#home {
+    width: 4.5%;
+    position:fixed;
+    bottom: 4%;
+    left: 93%;
+}
+#again{
+    display: none;
+    width: 5%;
+    position: absolute;
+    bottom: 4%;
+    left: 81%;
+}
+#in:hover,#home:hover,#levels:hover,#again:hover {
+    transform: scale(0.6);
+    transition-duration: 0.5s;
+    opacity: 0.5;
+}
+
+#insContainer {
+    height: 85vh;
+    width: 50%;
+    margin: auto;
+    margin-top: 13vw;
+    text-align: center;
+    color: white;
+    font-family: system-ui;
+    font-size: 22px;
+    line-height: 1.8;
+}
+/* הוראות */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/lightBcg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.animate {
+    animation: animatezoom 0.6s
+}
+#insContainer{
+    animation: animatezoom 0.6s
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+/* כפתור יציאה */
+.close {
+    position: absolute;
+    right: 2vw;
+    top: 2vw;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+#headIns{
+    text-align:center;
+}
+/* טופס רישום */
+#login{
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: center;
+}
+#container {
+    display: none;
+    position: absolute;
+    width: 30%;
+    top: 0;
+    margin-left: 35%;
+    padding: 2%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1.5s ease;
+    z-index: 100;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #1e0048;
+}
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #1e0048;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    color: #fff;
+    background-color:#f388d8; 
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 800px) {
+    #insContainer {
+      width: 60%;
+      top:4%;
+      font-size:large;
+
+    }
+    #headIns{
+        top:3%;
+    }
+       #getMyScore{
+        font-size:medium;
+        margin-top: 0.1%;
+    }
+    #getMyRecord{
+       font-size: medium;
+    }
+  }
+  
+  @media screen and (min-width: 2000px) {
+    #insContainer {
+      width: 80%;
+      margin-top: 30%;
+      font-size: 20px;
+    }
+    #getMyScore{
+        margin-top: 3%;
+    }
+    #getMyRecord{
+        margin-top: 12.5%;
+    }
+  }

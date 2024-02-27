@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href=../img/icon.jpg >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <img id="logo" src="../img/logo.png">
+    <img id="arrow" src="../img/חץ סגול.png" alt="arrow">
+    <img src="../img/Instructions.png" id="in" title="Instructions" onclick="document.getElementById('instructions').style.display='block'">
+
+    <div id="container">
+        <h2>Game Registration Form</h2>
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+    
+    <div id="pop">
+    </div>
+
+    <div id="instructions" class="modal">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('instructions').style.display='none'" class="close" title="חזרה למשחק">&times;</span>
+        </div>
+        <div class="animate" id="insContainer">
+            <p class="animate">
+            <h1 id="headIns">הוראות המשחק</h1>
+            ברוכים הבאים למשחק האורות 
+            על המסך יופיעו תשעה עיגולים ממוספרים, מידי כמה שניות "נדלק" עיגול אחר
+            ,עליך להקיש על ספרה במקלדת לפי הספרה שבעיגול שמואר
+            .לחיצה נכונה תזכה בנקודות וכן לחיצה שגויה תגרום להורדת נקודות
+            .חיי המשחק שלך מוגדרים כלבבות, כאשר הלבבות נגמרים המשחק יסתיים
+            בעבור כל עשר הצלחות יתווסף עוד לב, ובעבור עשרה כשלונות ירד לב           
+            שים לב: זמנך מוגבל, כאשר ייגמר הזמן המשחק יסתיים
+            שמור על זריזות ואבחנה.
+            תודה שבחרת להידלק איתנו! בהנאה
+            </p>
+        </div>
+    </div>
+    
+    <script src="home.js"></script>
+</body>
+</html>
